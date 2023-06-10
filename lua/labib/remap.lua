@@ -10,12 +10,17 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- vim.keymap.set("n", "<leader>vwm", function()
---     require("vim-with-me").StartVimWithMe()
--- end)
--- vim.keymap.set("n", "<leader>svwm", function()
---     require("vim-with-me").StopVimWithMe()
--- end)
+-- copy from clipboard to input file
+vim.keymap.set("n", "<F4>", "<cmd>silent !xclip -o -sel clip > ~/codes/X/in<CR>")
+
+-- copy file to clipboard
+
+
+-- delete file content
+
+
+-- copy template to current file
+vim.keymap.set("n", "<leader>t", ":!cp ~/codes/cp/template.cpp %<CR><CR>")
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
